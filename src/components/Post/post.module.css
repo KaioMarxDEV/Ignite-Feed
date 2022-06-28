@@ -1,0 +1,130 @@
+.post {
+  background: var(--gray-800);
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
+.post + .post {
+  margin-top: 2rem;
+}
+
+.content {
+  line-height: 1.6;
+  color: var(--grey-600);
+  margin-top: 1.5rem;
+}
+
+.content p {
+  margin-top: 1rem;
+}
+
+.content a {
+  font-weight: bold;
+  color: var(--green-500);
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: var(--green-300);
+}
+
+.post > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post > header time {
+  font-size: 0.875rem;
+  color: var(--grey-400);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author img {
+  box-sizing: initial;
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: 5px;
+  padding: 3px;
+  border: 1px solid var(--green-500);
+  margin-bottom: 1rem;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorInfo strong {
+  display: block;
+  color: var(--gray-100);
+  line-height: 1.6;
+}
+
+.authorInfo span {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  line-height: 1.6;
+}
+
+.commentForm {
+  width: 100%;
+}
+
+.commentForm > strong {
+  line-height: 1.6;
+  color: var(--gray-100);
+}
+
+.commentForm textarea {
+  margin: 1rem 0;
+  width: 100%;
+  background: var(--gray-900);
+  border: 1px solid var(--gray-900);
+  resize: none;
+  height: 6rem;
+  padding: 1rem;
+  border-radius: 5px;
+  color: var(--grey-300);
+  line-height: 1.4;
+
+  transition: box-shadow 0.2s;
+}
+
+.commentForm textarea:focus {
+  outline: none !important;
+  border: 1px solid var(--green-500);
+  box-shadow: 0 0 10px var(--green-500);
+}
+
+.commentForm footer {
+  visibility: hidden;
+  max-height: 0;
+}
+
+.commentForm:focus-within footer {
+  visibility: visible;
+  max-height: none;
+}
+
+.commentForm button[type=submit] {
+  padding: 1rem 2rem 0.875rem;
+  border-radius: 8px;
+  background: var(--green-500);
+  color: var(--gray-100);
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+.commentForm button:hover {
+  background: var(--green-300);
+} 
