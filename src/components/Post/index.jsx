@@ -1,3 +1,5 @@
+import { Avatar } from '../Avatar'
+import { Comment } from '../Comment'
 import { Separator } from '../Separator'
 import styles from './post.module.css'
 
@@ -6,7 +8,7 @@ export function Post() {
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img className={styles.avatar} src="https://github.com/kaiomarxdev.png" />
+          <Avatar src="https://github.com/kaiomarxdev.png" />
           <div className={styles.authorInfo} >
             <strong>Kaio Marx</strong>
             <span>Web Developer</span>
@@ -28,7 +30,7 @@ export function Post() {
       <form className={styles.commentForm}>
         <strong>Deixe seu comentario</strong>
 
-        <textarea 
+        <textarea
           placeholder='Clique aqui para escrever...'
         />
 
@@ -36,6 +38,12 @@ export function Post() {
           <button type="submit">Publicar</button>
         </footer>
       </form>
+
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
     </article>
   )
 }

@@ -2,7 +2,7 @@
   background: var(--gray-800);
   border-radius: 8px;
   overflow: hidden;
-  
+
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -19,16 +19,6 @@
   flex-direction: column;
   align-items: center;
   margin-top: calc(0px - 1.5rem + 6px);
-}
-
-.profile img {
-  box-sizing: initial;
-  width: 3.7rem;
-  height: 3.7rem;
-  border-radius: 8px;
-  padding: 2px;
-  border: 1px solid var(--green-500);
-  margin-bottom: 1rem;
 }
 
 .profile strong {
