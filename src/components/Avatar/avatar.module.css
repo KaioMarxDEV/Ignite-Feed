@@ -2,6 +2,13 @@
   width: 3.7rem;
   height: 3.7rem;
   border-radius: 50%;
+}
+
+
+.avatarWithBorder {
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: 50%;
   border: 2px solid var(--gray-800);
   outline: 2px solid var(--green-500);
 }
