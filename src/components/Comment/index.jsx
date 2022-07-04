@@ -1,10 +1,10 @@
-import { ThumbsUp, Trash } from 'phosphor-react';
-import { Avatar } from '../Avatar';
-import styles from './comment.module.css';
+import { ThumbsUp, Trash } from "phosphor-react";
+import { Avatar } from "../Avatar";
+import styles from "./comment.module.css";
 
-export function Comment() {
+export function Comment({ content }) {
   return (
-    <div className={styles.comment} >
+    <div className={styles.comment}>
       <Avatar hasBorder={false} src="http://github.com/kaiomarxdev.png" />
 
       <div className={styles.commentBox}>
@@ -15,12 +15,12 @@ export function Comment() {
               <time>Cerca de 1h atras</time>
             </div>
 
-            <button title='Delete Comment' >
+            <button title="Delete Comment">
               <Trash size={24} />
             </button>
           </header>
 
-          <p>Muito bem Devon, Parabens!</p>
+          <p>{content}</p>
         </div>
 
         <footer>
@@ -31,5 +31,5 @@ export function Comment() {
         </footer>
       </div>
     </div>
-  )
+  );
 }
