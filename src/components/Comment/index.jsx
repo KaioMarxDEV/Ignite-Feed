@@ -3,8 +3,8 @@ import { Avatar } from "../Avatar";
 import styles from "./comment.module.css";
 
 export function Comment({ content, onDeleteComment }) {
-  function handleDeleteComment(comment) {
-    onDeleteComment(comment);
+  function handleDeleteComment() {
+    onDeleteComment(content);
   }
 
   return (

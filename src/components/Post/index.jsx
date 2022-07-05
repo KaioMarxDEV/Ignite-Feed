@@ -31,12 +31,22 @@ export function Post({ author, content, publishedAt }) {
   }
 
   function handleNewCommentOnChange(e) {
+    e.target.setCustomValidity("");
     setNewComment(e.target.value);
   }
 
-  function deleteComment(comment) {
-    console.log(comment);
+  function handleCommentInvalid(e) {
+    e.target.setCustomValidity("Esse campo nao pode estar em branco");
   }
+
+  function deleteComment(commentToDelete) {
+    const commentsWithoutDeletedOne = comments.filter(
+      (comment) => comment !== commentToDelete
+    );
+    setComments(commentsWithoutDeletedOne);
+  }
+
+  const isNewCommentEmpty = newComment.length === 0;
 
   return (
     <article className={styles.post}>
@@ -77,10 +87,14 @@ export function Post({ author, content, publishedAt }) {
           value={newComment}
           onChange={handleNewCommentOnChange}
           placeholder="Clique aqui para escrever..."
+          onInvalid={handleCommentInvalid}
+          required
         />
 
         <footer>
-          <button type="submit">Publicar</button>
+          <button disabled={isNewCommentEmpty} type="submit">
+            Publicar
+          </button>
         </footer>
       </form>
 

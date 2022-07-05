@@ -103,7 +103,7 @@
   max-height: none;
 }
 
-.commentForm button[type=submit] {
+.commentForm button[type="submit"] {
   padding: 1rem 2rem 0.875rem;
   border-radius: 8px;
   background: var(--green-500);
@@ -113,10 +113,19 @@
   cursor: pointer;
 
   transition: background-color 0.3s;
+  transition: opacity 0.5s ease-in-out 0s;
+
+  filter: drop-shadow(0px 6px 3px rgb(255 255 255 / 0.07))
+    drop-shadow(0 2px 2px rgb(255 255 255 / 0.07));
 }
 
-.commentForm button:hover {
+.commentForm button[type="submit"]:not(:disabled):hover {
   background: var(--green-300);
+}
+
+.commentForm button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .commentList {
